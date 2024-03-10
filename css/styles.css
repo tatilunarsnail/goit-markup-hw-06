@@ -1,30 +1,73 @@
 body {
-    font-family: "Roboto", sans-serif;
-    color: #434455;
-    background-color: #fff;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 2%;
+        font-family: "Roboto", sans-serif;
+        color: #434455;
+        background-color: #fff;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 2%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+        margin-bottom: 0;
+        margin-top: 0;
 }
 
 ul,
 ol {
-    list-style-type: none;
+        list-style-type: none;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-left: 0;
 }
 
 a {text-decoration: none;}
 
 button {cursor: pointer;}
 
+address {
+        font-style: normal;
+}
+
+img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+}
+
+.container {
+        width:1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 0 auto;
+}
+
 /*===================================================*/
 
 /*======================HEADER=======================*/
+.header {
+        border-bottom: 1px solid #e7e9fc;
+}
+.header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
 
-.header {}
-
-.header-navigation {}
+.header-navigation {
+        display: flex;
+        align-items: center;
+        flex-grow:1;
+        justify-self: flex-start;
+}
 
 .header-logo {
+        margin-right: 76px;
         font-family: "Raleway", sans-serif;
         font-weight: 700;
         font-size: 18px;
@@ -32,6 +75,7 @@ button {cursor: pointer;}
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: #4d5ae5
+        
         }
 
 .header-logo-grey {
@@ -45,12 +89,17 @@ button {cursor: pointer;}
         ;
 }
 
-.header-contacts {
-        font-style:normal;
-}
-.header-menu-list {}
 
-.header-menu-item {}
+.header-menu-list {
+        display: flex;
+        gap: 40px;
+       flex-grow:1;
+}
+
+.header-menu-item {
+        padding-top: 24px;
+        padding-bottom: 24px;
+}
 
 .header-menu-link {
         font-weight: 500;
@@ -68,7 +117,10 @@ button {cursor: pointer;}
         color: #404bbf;
 }
 
-.contact-list {}
+.contact-list {
+        display: flex;
+        gap: 40px;
+}
 
 .contact-list-item {}
 
@@ -92,9 +144,13 @@ button {cursor: pointer;}
 
 /*======================HERO=========================*/
 
-.hero {background: #2e2f42;}
+.hero {
+        background: #2e2f42;
+        padding: 188px 0;
+}
 
 .hero-title {
+        max-width: 496px;
         font-weight: 700;
         font-size: 56px;
         line-height: 1.07;
@@ -104,12 +160,20 @@ button {cursor: pointer;}
 }
 
 .hero-button {
+        display: block;
+        min-width: 169px;
+        height: 56px;
+        border: none;
         background: #4d5ae5;
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.04em;
         color: #fff;
+        padding: 16px 32px;
+        border-radius: 4px;
+        cursor: pointer;
+
 }
 
 .hero-button:hover, .hero-button:focus {
@@ -122,7 +186,9 @@ button {cursor: pointer;}
 
 /*======================VALUES=======================*/
 
-.values {}
+.values {
+        padding: 120px 0;
+}
 
 .values-title {
         font-weight: 500;
@@ -132,11 +198,17 @@ button {cursor: pointer;}
         color: #2e2f42;
 }
 
-.values-list {}
+.values-list {
+        display: flex;
+        gap: 24px;
+}
 
-.values-list-item {}
+.values-list-item {
+        width: calc((100% - 72px) / 4);
+}
 
 .values-subtitle {
+        margin-bottom: 8px;
         font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
@@ -155,9 +227,12 @@ button {cursor: pointer;}
 
 /*======================TEAM=========================*/
 
-.team {background: #f4f4fd;}
+.team {
+        padding: 120px 0;
+        background: #f4f4fd;}
 
 .team-title {
+        margin-bottom: 72px;
         font-weight: 700;
         font-size: 36px;
         line-height: 1.11;
@@ -167,14 +242,23 @@ button {cursor: pointer;}
         color: #2e2f42;
 }
 
-.team-list {}
+.team-list {
+        display: flex;
+        gap: 24px;
+
+}
 
 .team-list-item {
+        width: calc((100% - 72px) / 4);
         background-color: #FFFFFF;
+        border-radius: 0px 0px 4px 4px;
 }
 
 .team-image {}
+.team-info {
+        padding: 32px 0;
 
+}
 .team-subtitle {
         font-weight: 500;
         font-size: 20px;
@@ -182,6 +266,7 @@ button {cursor: pointer;}
         letter-spacing: 0.02em;
         text-align: center;
         color: #2e2f42;
+        margin-bottom: 8px;
 }
 
 .team-text {
@@ -196,7 +281,10 @@ button {cursor: pointer;}
 
 /*======================PORTFOLIO====================*/
 
-.portfolio {}
+.portfolio {
+        padding-top: 120px;
+        padding-bottom: 120px;
+}
 
 .portfolio-title {
         font-weight: 700;
@@ -206,15 +294,29 @@ button {cursor: pointer;}
         text-align: center;
         text-transform: capitalize;
         color: #2e2f42;
+        margin-bottom: 72px;
 }
 
-.portfolio-list {}
+.portfolio-list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 48px;
+}
 
-.portfolio-list-item {}
+.portfolio-list-item {
+        width: calc((100% - 48px) / 3);
+}
 
 .portfolio-image {}
+.portfolio-info {
+        padding: 32px 16px;
+        border: 1px solid #e7e9fc;
+        border-top: none;
+}
 
 .portfolio-subtitle {
+        margin-bottom: 8px;
         font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
@@ -233,9 +335,13 @@ button {cursor: pointer;}
 
 /*======================FOOTER=======================*/
 
-.footer {background: #2e2f42;}
+.footer {
+        padding: 100px 0;
+        background: #2e2f42;}
 
 .footer-logo {
+        display: inline-block;
+        margin-bottom: 16px;
         font-family: "Raleway", sans-serif;
         font-weight: 700;
         font-size: 18px;
@@ -256,6 +362,7 @@ button {cursor: pointer;}
 }
 
 .footer-text {
+        max-width: 264px;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
