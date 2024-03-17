@@ -5,6 +5,8 @@ body {
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 2%;
+        max-width: 1440px;
+        margin: 0 auto;
 }
 
 h1,
@@ -54,8 +56,7 @@ img {
         border-bottom: 1px solid #e7e9fc;
 }
 .header-container {
-        padding-top: 24px;
-        padding-bottom: 24px;
+        
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -64,8 +65,9 @@ img {
 .header-navigation {
         display: flex;
         align-items: center;
-        flex-grow:1;
         justify-self: flex-start;
+        padding-top: 24px;
+        padding-bottom: 24px;
 }
 
 .header-logo {
@@ -108,6 +110,7 @@ img {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #2e2f42;
+        transition: color 250ms ease-in-out;
 }
 
 .header-menu-link:hover, .header-menu-link:focus {
@@ -118,6 +121,20 @@ img {
         color: #404bbf;
 }
 
+.current {
+        position:relative;
+        color: #404bbf;
+}
+.current::after {
+        content: "";
+        border-radius: 2px;
+        width: 100%;
+        height: 4px;
+        background: #404bbf;
+        position:absolute;
+        left: 0;
+        bottom: -26px;
+}
 .contact-list {
         display: flex;
         gap: 40px;
@@ -131,6 +148,7 @@ img {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #434455;
+        transition: color 250ms ease-in-out;
 }
 
 .contact-list-link:hover, .contact-list-link:focus {
@@ -145,9 +163,13 @@ img {
 
 /*======================HERO=========================*/
 
-.hero {
-        background: #2e2f42;
+.hero { background-color: #2e2f42;
         padding: 188px 0;
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/peopleinoffice.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        
 }
 
 .hero-title {
@@ -158,6 +180,8 @@ img {
         letter-spacing: 0.02em;
         text-align: center;
         color: #fff;
+        margin: 0 auto;
+        margin-bottom: 48px;
 }
 
 .hero-button {
@@ -172,8 +196,10 @@ img {
         letter-spacing: 0.04em;
         color: #fff;
         padding: 16px 32px;
+        margin: 0 auto;
         border-radius: 4px;
         cursor: pointer;
+        transition: color 250ms ease-in-out;
 
 }
 
@@ -230,6 +256,15 @@ img {
         color: #2e2f42;
 }
 
+.icon-box {
+        margin:0 auto;
+        padding: 24px 100px;
+        border: 1px solid #8e8f99;
+        border-radius: 4px;
+        width: 264px;
+        height: 112px;
+        background: #f4f4fd;
+}
 .values-text {
         font-size: 16px;
         line-height: 1.5;
@@ -268,6 +303,31 @@ img {
         border-radius: 0px 0px 4px 4px;
 }
 
+.team-contacts {
+        width: 232px;
+        height: 40px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        flex-direction: row;
+        
+}
+
+.team-contacts-icons {
+        width: 40px;
+        height: 40px;
+        background-color: #4d5ae5;
+        border-radius: 50%;
+        padding: 12px;
+        fill:#fff;
+        transition: color 250ms ease-in-out;
+}
+
+.team-contacts-icons:hover {
+        background: #404bbf;
+}
 .team-image {}
 .team-info {
         padding: 32px 0;
@@ -320,8 +380,35 @@ img {
 
 .portfolio-list-item {
         width: calc((100% - 48px) / 3);
+        position:relative;
+        overflow:hidden;
 }
 
+
+.overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #4d5ae5;
+        text-align: center;
+        padding: 40px 32px;
+        transform: translatey(100%);
+        transition: transform 250ms ease-in-out;
+
+}
+.portfolio-list-item:hover .overlay {
+        transform: translatey(0);
+}
+.overlay-text {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #f4f4fd;
+}
 .portfolio-image {}
 .portfolio-info {
         padding: 32px 16px;
@@ -365,6 +452,10 @@ img {
         color: #4d5ae5;
 }
 
+.footer .container {
+        display: flex;
+        align-items: baseline;
+}
 .footer-logo-white {
         font-family: "Raleway", sans-serif;
         font-weight: 700;
@@ -381,4 +472,36 @@ img {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #f4f4fd;
+}
+
+.footer-social-list {
+        width: 208px;
+        height: 40px;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: row;
+        gap: 16px;
+
+}
+
+.footer-social-icons {
+        width: 40px;
+        height: 40px;
+        background-color: #4d5ae5;
+        border-radius: 50%;
+        padding: 8px;
+        fill: #fff;
+        transition: color 250ms ease-in-out;
+}
+
+.footer-social-icons:hover {
+        background: #31d0aa;
+}
+
+.footer-social {
+        max-width:208px;
+        height: 80px;
+        margin-left: 120px;
 }
