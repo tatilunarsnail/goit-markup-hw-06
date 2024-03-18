@@ -54,6 +54,9 @@ img {
 /*======================HEADER=======================*/
 .header {
         border-bottom: 1px solid #e7e9fc;
+        box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+                0px 1px 1px rgba(46, 47, 66, 0.16),
+                0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container {
         
@@ -78,8 +81,8 @@ img {
         line-height: 1.17;
         letter-spacing: 0.03em;
         text-transform: uppercase;
-        color: #4d5ae5
-        
+        color: #4d5ae5;
+
         }
 
 .header-logo-grey {
@@ -110,7 +113,7 @@ img {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #2e2f42;
-        transition: color 250ms ease-in-out;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-menu-link:hover, .header-menu-link:focus {
@@ -133,7 +136,7 @@ img {
         background: #404bbf;
         position:absolute;
         left: 0;
-        bottom: -26px;
+        bottom: -1px;
 }
 .contact-list {
         display: flex;
@@ -148,7 +151,7 @@ img {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #434455;
-        transition: color 250ms ease-in-out;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-list-link:hover, .contact-list-link:focus {
@@ -163,12 +166,15 @@ img {
 
 /*======================HERO=========================*/
 
-.hero { background-color: #2e2f42;
+.hero { 
+        max-width: 1440px;
+        background-color: #2e2f42;
         padding: 188px 0;
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/peopleinoffice.jpg);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: cover;
         
 }
 
@@ -199,7 +205,7 @@ img {
         margin: 0 auto;
         border-radius: 4px;
         cursor: pointer;
-        transition: color 250ms ease-in-out;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -257,8 +263,12 @@ img {
 }
 
 .icon-box {
-        margin:0 auto;
-        padding: 24px 100px;
+        /* margin:0 auto;
+        padding: 24px 100px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8px;
         border: 1px solid #8e8f99;
         border-radius: 4px;
         width: 264px;
@@ -301,11 +311,12 @@ img {
         width: calc((100% - 72px) / 4);
         background-color: #FFFFFF;
         border-radius: 0px 0px 4px 4px;
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+                0px 1px 1px rgba(46, 47, 66, 0.16),
+                0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-contacts {
-        width: 232px;
-        height: 40px;
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -318,14 +329,26 @@ img {
 .team-contacts-icons {
         width: 40px;
         height: 40px;
-        background-color: #4d5ae5;
-        border-radius: 50%;
-        padding: 12px;
-        fill:#fff;
-        transition: color 250ms ease-in-out;
 }
 
-.team-contacts-icons:hover {
+.icon {
+        fill: #f4f4fd;
+}
+.team-contacts-link {
+        width: 100%;
+        height: 100%;
+        background-color: #4d5ae5;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-contacts-link:hover {
+        background: #404bbf;
+}
+
+.team-contacts-link:focus {
         background: #404bbf;
 }
 .team-image {}
@@ -380,36 +403,48 @@ img {
 
 .portfolio-list-item {
         width: calc((100% - 48px) / 3);
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list-item:hover {
+        box-shadow:  1px 6px rgba(46, 47, 66, 0.08),
+0px 1px 1px rgba(46, 47, 66, 0.16),
+0px 2px 1px rgba(46, 47, 66, 0.08);}
+        
+.portfolio-list-item:hover .portfolio-info {
+        transform: translatey(0%);
+}
+.overlay {
         position:relative;
         overflow:hidden;
+        position: absolute;
+
 }
 
-
-.overlay {
+.overlay-text {
         position: absolute;
         top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #4d5ae5;
-        text-align: center;
-        padding: 40px 32px;
-        transform: translatey(100%);
-        transition: transform 250ms ease-in-out;
-
-}
-.portfolio-list-item:hover .overlay {
-        transform: translatey(0);
-}
-.overlay-text {
         font-family: "Roboto", sans-serif;
         font-weight: 400;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #f4f4fd;
+        padding: 40px 32px;
+        background-color: #4d5ae5;
+        height: 100%;
+        width: 100%;
+        transform: translatey(100%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
+
+.portfolio-list-item:hover .overlay-text {
+        transform: translatey(0%);
+}
+
 .portfolio-image {}
+
 .portfolio-info {
         padding: 32px 16px;
         border: 1px solid #e7e9fc;
@@ -455,6 +490,7 @@ img {
 .footer .container {
         display: flex;
         align-items: baseline;
+        margin-right: 120px;
 }
 .footer-logo-white {
         font-family: "Raleway", sans-serif;
@@ -468,10 +504,12 @@ img {
 
 .footer-text {
         max-width: 264px;
+        margin-bottom: 16px;
         font-size: 16px;
+        font-weight: 500;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        color: #f4f4fd;
+        color: #FFFFFF;
 }
 
 .footer-social-list {
@@ -489,14 +527,22 @@ img {
 .footer-social-icons {
         width: 40px;
         height: 40px;
-        background-color: #4d5ae5;
-        border-radius: 50%;
-        padding: 8px;
-        fill: #fff;
-        transition: color 250ms ease-in-out;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-icons:hover {
+.footer-social-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: #4d5ae5;
+        border-radius: 50%;
+}
+.footer-social-link:hover {
+        background: #31d0aa;
+}
+.footer-social-link:focus {
         background: #31d0aa;
 }
 
@@ -504,4 +550,7 @@ img {
         max-width:208px;
         height: 80px;
         margin-left: 120px;
+}
+.footer-icon {
+        fill: #fff;    
 }
