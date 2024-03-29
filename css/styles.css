@@ -4,9 +4,8 @@ body {
         background-color: #fff;
         font-size: 16px;
         line-height: 24px;
-        letter-spacing: 2%;
-        max-width: 1440px;
-        margin: 0 auto;
+        letter-spacing: 0.02em;
+        
 }
 
 h1,
@@ -114,6 +113,7 @@ img {
         letter-spacing: 0.02em;
         color: #2e2f42;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 27px 0;
 }
 
 .header-menu-link:hover, .header-menu-link:focus {
@@ -175,6 +175,7 @@ img {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        margin: 0 auto;
         
 }
 
@@ -370,6 +371,7 @@ img {
         letter-spacing: 0.02em;
         text-align: center;
         color: #434455;
+        margin-bottom: 8px;
 }
 
 /*===================================================*/
@@ -544,9 +546,7 @@ img {
 }
 
 .footer-social {
-        max-width:208px;
-        height: 80px;
-        margin-left: 120px;
+        
 }
 .footer-icon {
         fill: #f4f4fd;    
