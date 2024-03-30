@@ -399,7 +399,7 @@
     <div class="modal-overlay">
         <div class="modal">
            <button type="button" class="modal-close">
-            <svg width="8" height="8">
+            <svg class="modal-close-icon" width="8" height="8">
                 <use href="./images/icons.svg#icon-close"></use>
             </svg>
            </button>
@@ -424,7 +424,7 @@
                 </div>
             </div>
             <div class="modal-field">
-                <label for="user-email" class="modal-label">Name</label>
+                <label for="user-email" class="modal-label">Email</label>
                 <div class="modal-input-wrap">
                     <input class="modal-input" id="user-email" type="email" name="user-email" placeholder="" />
                     <svg class="modal-icon" width="18" height="24">
@@ -432,13 +432,13 @@
                     </svg>
                 </div>
             </div>
-            <div class="modal-field">
+            <div class="modal-field comment-modal-field">
                 <label for="user-comment" class="modal-label">Comment</label>
-                <textarea class="modal-text" name="user-comment" id="user-comment"></textarea>
+                <textarea class="modal-text" name="user-comment" id="user-comment" placeholder="Text input"></textarea>
             </div>
-            <div class="modal-field">
-                <input type="checkbox" name="agreement" required id="agreement" class="modal-check visually-hidden" />
-                <label for="agreement" class="check-text">
+            <div class="modal-field modal-field-checkbox">
+                <input type="checkbox" name="user-privacy" required id="user-privacy" value="true" class="modal-check visually-hidden" />
+                <label for="user-privacy" class="check-text">
                     <span class="fake-modal-check">
                         <svg class="modal-check-icon" width="10" height="8">
                             <use href="./images/icons.svg#icon-check"></use>
