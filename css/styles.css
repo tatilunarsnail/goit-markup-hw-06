@@ -572,6 +572,7 @@ img {
         font-size: 12px;
         line-height: 2;
         letter-spacing: 0.04em;
+        color: #ffffff;
 
 }
 .footer-input::placeholder {
@@ -579,7 +580,7 @@ img {
         font-size: 12px;
         line-height: 2;
         letter-spacing: 0.04em;
-        color: #fff;
+        color: #ffffff;
 }
 .footer-form-button {
         display: flex;
