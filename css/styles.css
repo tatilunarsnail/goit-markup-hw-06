@@ -884,6 +884,7 @@ img {
         }
 
         .header {
+                width: 768px;
                 border: none;
                 border-bottom: 1px solid #e7e9fc;
         }
@@ -996,7 +997,8 @@ img {
                 height: 312px;
                 display: flex;
                 flex-wrap: wrap;
-                row-gap: 24px;
+                row-gap: 72px;
+                column-gap: 24px;
         }
         .values-list-item {
                 
@@ -1009,12 +1011,11 @@ img {
                 margin: 0 auto;
         }
         .team-list {
-                width: 768px;
+                width: 736px;
                 flex-wrap: wrap;
                 gap: 64px 24px;
                 flex-direction: row;
                 justify-content: center;
-                margin: 0 auto;
                 padding-bottom: 96px;
 
         }
@@ -1022,6 +1023,9 @@ img {
                 padding: 0px 0px 32px 0px;
                 width: 264px;
                 height: 428px;
+        }
+        .values-list-item:not(:last-child) {
+                margin-bottom: 0px;
         }
         .portfolio-list {
                 display: flex;
