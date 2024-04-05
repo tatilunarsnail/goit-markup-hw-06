@@ -67,7 +67,7 @@ img {
 
 /*======================HEADER=======================*/
 .header {
-       
+        width: 320px;
         border: 1px solid #e7e9fc;
         box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
                 0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -92,8 +92,8 @@ img {
 }
 .header-navigation {
         display: flex;
-                align-items: center;
-                justify-self: flex-start;
+        align-items: center;
+        justify-self: flex-start;
 }
 .header-menu-list, .contact-list {
         display: none;
@@ -336,7 +336,7 @@ img {
 .values-subtitle {
         font-weight: 700;
         font-size: 36px;
-        line-height: 1.11111;
+        line-height: 1.1;
         letter-spacing: 0.02em;
         text-align: center;
         color: #2e2f42;
@@ -360,7 +360,7 @@ img {
         margin-bottom: 72px;
         font-weight: 700;
         font-size: 36px;
-        line-height: 1.11111;
+        line-height: 1.1;
         letter-spacing: 0.02em;
         text-align: center;
         color: #2e2f42;
@@ -901,7 +901,6 @@ img {
                 height: 72px;
         }
         .header-logo {
-                width: 115px;
                 margin-right: 120px;
         }
         .header-navigation {
@@ -1017,7 +1016,6 @@ img {
                 flex-direction: row;
                 justify-content: center;
                 padding-bottom: 96px;
-
         }
         .team-list-item {
                 padding: 0px 0px 32px 0px;
@@ -1062,13 +1060,159 @@ img {
                 margin-left: 108px;
         }
        .footer-social {
-        margin-left: 24px;
+                margin-left: 24px;
        }
        .footer-form {
-        flex-direction: row;
+                flex-direction: row;
        }
        .footer-subtitle {
-        margin: 0px 0px 16px 0px;
+                margin: 0px 0px 16px 0px;
        }
+       .modal {
+               width: 408px;
+               min-height: 584px;
+               padding: 0 24px;
+        }
+        .modal-title {
+                max-width: 360px;
+                max-height: 24px;
+        }
 
+        .modal-input {
+                width: 360px;
+                height: 40px;
+        }
+        .modal-text {
+                width: 360px;
+                height: 120px;
+        }
+}
+/* ============================DESKTOP============================== */
+
+@media screen and (min-width: 1158px) {
+
+        .container {
+                width: 1158px;
+                padding-left: 15px;
+                padding-right: 15px;
+        }
+        .header {
+                width: 1158px;
+        }
+        .header-container {
+                width: 1158px;
+                justify-content: space-between;
+        }
+        .header-navigation {
+                padding-top: 24px;
+                padding-bottom: 24px;
+        }
+        .header-logo {
+                margin-right: 76px;
+        }
+        .contact-list {
+                flex-direction: row;
+                padding: 0px;
+        }
+        .contact-list-link {
+                font-size: 16px;
+                line-height: 1.5;
+        }
+        .hero {
+                max-width: 1440px;
+                height: 600px;
+                padding: 188px 0;
+                margin-bottom: 120px;
+                background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                        url(../images/Desktop/people-office-desktopx1.jpg);
+        }
+        .hero-title {
+                margin-bottom: 48px;
+        }
+        .values {
+                margin-bottom: 120px;
+        }
+        .values-list {
+                width: 1128px;
+                height: 224px;
+                flex-wrap: nowrap;
+        }
+        .values-list-item {
+                width: calc((100% - 72px) / 4);
+        }
+        .values-subtitle {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 1.2;
+                text-align: start;
+        }
+        .icon-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 8px;
+                border: 1px solid #8e8f99;
+                border-radius: 4px;
+                width: 264px;
+                height: 112px;
+                background: #f4f4fd;
+        }
+        .team {
+                margin-bottom: 120px;
+                width: 1158px;
+                height: 780px;
+                padding: 120px 0;
+        }
+        .team-list {
+                width: 1128px;
+                flex-wrap: nowrap;
+                gap: 24px;
+                flex-direction: row;
+                justify-content: center;
+                padding: 0;
+        }
+        .team-list-item {
+                width: calc((100% - 72px) / 4);
+        }
+        .portfolio {
+                padding-top: 120px;
+                padding-bottom: 0px;
+        }
+        .portfolio-list {
+                row-gap: 48px;
+        }
+        .portfolio-list-item {
+                width: calc((100% - 48px) / 3);
+        }
+        .footer {
+                width: 1440px;
+                height: 312px;
+                padding: 100px 0;
+        }
+        .footer .container {
+                flex-wrap: nowrap;
+                align-items: baseline;
+                justify-content: center;
+        }
+        .footer-logo-text {
+                margin-left: 156px;
+                margin-right: 120px;
+        }
+        .footer-text {
+                width: 264px;
+                margin-bottom: 16px;
+        }
+        .footer-social {
+                margin-left: 0px;
+                margin-right: 80px;
+        }
+        .footer-subscribe {
+                width: 453px;
+                height: 80px;
+                margin-left: 0px;
+                margin-right: 159px;
+        }
+        .modal {
+                padding: 0px 24px 24px 24px;
+        }
 }
