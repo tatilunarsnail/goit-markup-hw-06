@@ -45,7 +45,7 @@ img {
 }
 
 .container {
-        width: 320px;
+        max-width: 320px;
         padding-left: 16px;
         padding-right: 16px;
         margin: 0 auto;
@@ -886,7 +886,7 @@ img {
 @media screen and (min-width: 768px) {
         
         .container {
-                width: 768px;
+                max-width: 768px;
         }
 
         .header {
@@ -987,7 +987,7 @@ img {
                 max-width: 768px;
                 height: 436px;
                 background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-                url(../images/Tablet/imgwomaninyellow-tab.jpg);
+                url(../images/Tablet/people-in-the-office-tab.jpg);
                 padding-top: 112px;
         }
         @media screen and (min-resolution: 192dpi) {
@@ -1104,7 +1104,7 @@ img {
 @media screen and (min-width: 1158px) {
 
         .container {
-                width: 1158px;
+                max-width: 1158px;
                 padding-left: 15px;
                 padding-right: 15px;
         }
