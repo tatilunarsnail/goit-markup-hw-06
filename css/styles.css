@@ -451,8 +451,10 @@ img {
 .portfolio-list-item {
         width: 288px;
         transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        margin-bottom: 48px;
-}
+        }
+.portfolio-list-item:not(:last-child) {
+                margin-bottom: 48px;
+        }
 .portfolio-list-item:hover {
         box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -510,11 +512,8 @@ img {
 
 /*======================FOOTER=======================*/
 .footer {
-        width: 320px;
-        height: 664px;
         background: #2e2f42;
         padding: 96px 0 96px 0;
-        margin: 0 auto;
 }
 .footer-logo-text {
         margin-bottom: 72px;
@@ -973,7 +972,9 @@ img {
                 font-size: 56px;
                 margin-bottom: 36px;
         }
-        
+        .values-subtitle {
+                text-align: start;
+        }
         .values-list {
                 width: 736px;
                 height: 312px;
@@ -986,18 +987,12 @@ img {
                 
                 width: calc((100% - 24px) / 2);
         }
-        .team {
-                width: 768px;
-                height: 1224px;
-                margin: 0 auto;
-        }
         .team-list {
                 width: 736px;
                 flex-wrap: wrap;
                 gap: 64px 24px;
                 flex-direction: row;
                 justify-content: center;
-                padding-bottom: 96px;
         }
         .team-list-item {
                 padding: 0px 0px 32px 0px;
@@ -1017,9 +1012,10 @@ img {
                 width: 356px;
                 height: 420px;
         }
+        .portfolio-list-item:not(:last-child) {
+                margin-bottom: 0px;
+        }
         .footer {
-                width: 768px;
-                height: 456px;
                 padding: 96px 108px;
 
         }
@@ -1037,6 +1033,7 @@ img {
        .footer-social {
                 display:block;
                 margin-left: 24px;
+                margin-bottom: 0px;
        }
        .footer-form {
                 flex-direction: row;
@@ -1098,7 +1095,6 @@ img {
                 max-width: 1440px;
                 height: 600px;
                 padding: 188px 0;
-                margin-bottom: 120px;
                 background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
                         url(../images/Desktop/people-office-desktopx1.jpg);
         }
@@ -1126,7 +1122,9 @@ img {
                 font-weight: 500;
                 font-size: 20px;
                 line-height: 1.2;
-                text-align: start;
+        }
+        .values-text {
+                font-weight: 400;
         }
         .icon-box {
                 display: flex;
@@ -1140,8 +1138,6 @@ img {
                 background: #f4f4fd;
         }
         .team {
-                width: 1158px;
-                height: 780px;
                 padding: 120px 0;
         }
         .team-list {
@@ -1165,8 +1161,6 @@ img {
                 width: calc((100% - 48px) / 3);
         }
         .footer {
-                width: 1440px;
-                height: 312px;
                 padding: 100px 0;
         }
         .footer .container {
@@ -1175,8 +1169,8 @@ img {
                 justify-content: center;
         }
         .footer-logo-text {
-                margin-left: 156px;
                 margin-right: 120px;
+                margin-bottom: 0px;
         }
         .footer-text {
                 width: 264px;
@@ -1187,10 +1181,7 @@ img {
                 margin-right: 80px;
         }
         .footer-subscribe {
-                width: 453px;
-                height: 80px;
                 margin-left: 0px;
-                margin-right: 159px;
         }
         .modal {
                 padding: 0px 24px 24px 24px;
